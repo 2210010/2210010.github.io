@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/19/62a41385df0e247e.jpg">
 <meta property="article:published_time" content="2022-06-19T13:59:08.696Z">
-<meta property="article:modified_time" content="2022-06-19T14:47:04.006Z">
+<meta property="article:modified_time" content="2022-06-20T08:38:37.871Z">
 <meta property="article:author" content="羊">
 <meta property="article:tag" content="爆炸">
 <meta name="twitter:card" content="summary">
@@ -193,10 +193,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-06-19 21:59:08 / 修改时间：22:47:04" itemprop="dateCreated datePublished" datetime="2022-06-19T21:59:08+08:00">2022-06-19</time>
+              <time title="创建时间：2022-06-19 21:59:08" itemprop="dateCreated datePublished" datetime="2022-06-19T21:59:08+08:00">2022-06-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-20 16:38:37" itemprop="dateModified" datetime="2022-06-20T16:38:37+08:00">2022-06-20</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -244,7 +250,7 @@
 
 <p>由于自己课题方向的原因，近年来我接触到不少关于爆炸力学方面的知识，这些知识或来源于书本，或来自于政府规范，或来自高校内的博士专业课。可以说，无论是书、规范、还是网上的课程，关于爆炸的产生及其造成的结构响应，都有相当多的文献可以参考。</p>
 <p>那么，为什么我还要专门开启一个系列，专门聊一聊爆炸力学呢？</p>
-<p>主要原因，是我对目前的这些教材并不满意。爆炸相对于普通人而言，其实并不算遥远。过年时放的擦炮、烟花，也算做是爆炸的一种。家里煤气灶的一次打火，也可以算作是爆炸的前兆（只不过在这种情况下它基本上不可能发生向爆炸形式的转变）。而对于高校内的研究生而言，有相当多的课题是需要考虑如何引入爆炸这一因素的。举例来说，舰船的设计、建筑结构的防护、车辆的冲击、恐怖袭击的预防，都需要用到爆炸知识。然而，除了爆破工程相关专业的学生在本科阶段就需要接触到爆炸力学，很多学生在接触到自己的课题之前是并不了解爆炸的作用机理的。现代化的有限元软件已经可以做到不需要知道爆炸的相关机理，只需要输入参数，就可以绘制出漂亮的爆炸荷载云图，然而如果不知道爆炸产生的机理，即使有限元能够算出一个结果，也无法用概念判断其是否正确，更别提从深层机制解释结构的损伤了。</p>
+<p>主要原因，是我对目前的这些教材并不满意。爆炸相对于普通人而言，其实并不算遥远。过年时放的擦炮、烟花，也算做是爆炸的一种。对于高校内的研究生而言，有相当多的课题是需要考虑如何引入爆炸这一因素的。举例来说，舰船的设计、建筑结构的防护、车辆的冲击、恐怖袭击的预防，都需要用到爆炸知识。然而，除了爆破工程相关专业的学生在本科阶段就需要接触到爆炸力学，很多学生在接触到自己的课题之前是并不了解爆炸的作用机理的。现代化的有限元软件已经可以做到不需要知道爆炸的相关机理，只需要输入参数，就可以绘制出漂亮的爆炸荷载云图，然而如果不知道爆炸产生的机理，即使有限元能够算出一个结果，也无法用概念判断其是否正确，更别提从深层机制解释结构的损伤了。</p>
 <p>因此，我想从一个工科生的角度出发，写一个爆炸力学的教程。这个教程不会涉及过多的气体动力学方面知识（当然了，为了内容的完整性，气体动力学基本微分方程组还是会介绍的），而是着重关注于爆炸冲击波的产生、传播、扩散、作用、反射等现象，以及当它作用在结构上后引起的应力波传播机制。如果有时间的话，我还会谈一谈一些具体的问题，比如冲击波计算的简化、内爆炸和外爆炸下冲击波的作用、水下爆炸、土壤爆炸下冲击波的作用、以及如何用CFD或ALE方法实现冲击波的数值模拟、流固耦合。</p>
 <p>不过，考虑到我自己能力有限，在之后的课程中难免出现纰漏，如果有大佬发现，还请与我联系，非常感谢各位能够指正。如果有不懂的地方，也可以与我联系，或者在评论区留言。我会尽可能降低入门爆炸力学的门槛，最好能做到我老妈都能够看懂的程度。</p>
 <hr>
@@ -417,6 +423,9 @@
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="mailto:2210010@tongji.edu.cn" title="E-Mail → mailto:2210010@tongji.edu.cn" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/yang-yang-zi-76-5" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yang-yang-zi-76-5" rel="noopener" target="_blank"><i class="gratipay fa-fw"></i>知乎</a>
       </span>
   </div>
 
